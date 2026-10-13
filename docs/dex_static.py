@@ -65,4 +65,3 @@ with (OUT/'dex-methods.txt').open('w',encoding='utf8') as f:
   for m in r['methods']:
    f.write('\n'+m['method']+'\n');f.write('\n'.join(f'{o:04x} {s}' for o,s in m['refs'])+'\n')
 print([(r['dex'],len(r['methods']),r['classes']) for r in results])
-
